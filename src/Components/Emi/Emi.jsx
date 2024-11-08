@@ -53,6 +53,7 @@ const EMI = () => {
                 emi !== null && <h1 className='heading-text'>
                     EMI: {emi}
                 </h1>
+            
             }
         </div>
     </section>
