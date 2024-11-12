@@ -1,114 +1,41 @@
-.form {
-    background: url('/Users/work/Desktop/wtproject/my-app/src/assets/pxfuel.jpg') 50%;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+.wrapper {
+    width: 420px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
   }
 
-/* Registration Form Styles */
-
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-}
-
-.form {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    color: #fff;
-    text-align: center;
-}
-
-.form h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #ffffff;
-}
-
-.input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #ffffff;
+  .input-box input {
+    width: 80%;
+    height: 50px;
+    background: transparent;
     outline: none;
-}
-
-.input[type="file"] {
-    padding: 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-.btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
     font-size: 16px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #cccccc;
-}
-
-.label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.image-preview {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.image-preview img {
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-}
-
-.messages .success,
-.messages .error {
-    font-size: 14px;
-    color: #ff4d4d; /* Red for error messages */
-    margin-bottom: 15px;
-}
-
-.messages .success {
-    color: #4caf50; /* Green for success messages */
-}
-
-/* Register link alignment */
-.register-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.register-link a {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.register-link a:hover {
-    color: #cccccc;
-}
-
+    color: #fff;
+    padding: 0 45px 0 20px;
+  }
+  
+  .input-box input::placeholder {
+    color: #ccc;
+  }
+  
+  .input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #ccc;
+  }
+  
+  .h1{
+    color: #fff;
+  }

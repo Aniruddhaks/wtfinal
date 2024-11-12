@@ -89,9 +89,9 @@ export default function RegForm() {
     return (
         <div className="home">
         <div className="form">
-            <div>
+
                 <h1>User Registration</h1>
-            </div>
+
 
             {/* Calling to the methods */}
             <div className="messages">
@@ -99,17 +99,20 @@ export default function RegForm() {
                 {successMessage()}
             </div>
 
-            <form>
+            <form className='wrapper'>
                 {/* Labels and inputs for form data */}
                 <label className="label">Name</label>
-                <input
+                <div className="input-box">
+                <input 
                     onChange={handleName}
                     className="input"
                     value={name}
                     type="text"
                 />
+                </div>
 
                 <label className="label">Phone Number</label>
+                <div className="input-box">
                 <input
                     onChange={handlePhone}
                     className="input"
@@ -117,30 +120,37 @@ export default function RegForm() {
                     type="tel"
                     pattern="[0-9]{10}" // Example pattern for a 10-digit phone number
                 />
+                </div>
 
                 <label className="label">Email</label>
+                <div className="input-box">
                 <input
                     onChange={handleEmail}
                     className="input"
                     value={email}
                     type="email"
                 />
+                </div>
 
                 <label className="label">Password</label>
+                <div className="input-box">
                 <input
                     onChange={handlePassword}
                     className="input"
                     value={password}
                     type="password"
                 />
+                </div>
 
-                <label className="label">Profile Picture</label>
+                <label className="label">Profile Picture </label>
+
                 <input
                     onChange={handleProfilePic}
                     className="input"
                     type="file"
                     accept="image/*" // Accept only image files
                 />
+                
 
                 {/* Image Preview */}
                 {profilePic && (
