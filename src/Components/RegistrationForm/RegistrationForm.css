@@ -39,3 +39,9 @@
   .h1{
     color: #fff;
   }
+
+  .form-heading h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}

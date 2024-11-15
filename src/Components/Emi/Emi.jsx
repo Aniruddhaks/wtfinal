@@ -1,7 +1,8 @@
 // Create an EMI (Equated Monthly Installment) calculator using React.js. The application should allow users to input the principal amount, interest rate, and loan tenure (in months). Upon clicking a button, the application should calculate and display the corresponding EMI.
 
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import './Emi.css'
+import { useLocation } from 'react-router-dom';
 
 const EMI = () => {
     const [principal, setPrincipal] = useState('');
@@ -21,6 +22,16 @@ const EMI = () => {
             setEmi(null)
         }
     }
+
+        const location = useLocation();
+        const { price } = location.state || {}; // Access the price from location state
+
+        useEffect(() => {
+            if (price && !principal) {
+              setPrincipal(price); // Directly set the number as the loan amount
+            }
+          }, [price]);
+    
   return (
     <section className='timeline-landing'>
         <div className='row container'>
@@ -51,7 +62,7 @@ const EMI = () => {
 
             {
                 emi !== null && <h1 className='heading-text'>
-                    EMI: {emi}
+                    EMI: ₹{emi}
                 </h1>
             
             }

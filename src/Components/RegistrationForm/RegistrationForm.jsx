@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-// import './RegistrationForm.css'
+ import './RegistrationForm.css'
 
 export default function RegForm() {
     const navigate = useNavigate();
@@ -49,10 +49,25 @@ export default function RegForm() {
         e.preventDefault();
         if (name === "" || email === "" || password === "") {
             setError(true);
-        } else {
+        } 
+        const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        setError(true);
+        alert("Please enter a valid 10-digit phone number.");
+        validationError = true;
+    }
+
+    // Validate email (must end with '@gmail.com')
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (!emailPattern.test(email)) {
+        setError(true);
+        alert("Please enter a valid Gmail address ending with '@gmail.com'.");
+        validationError = true;
+    }
+        else {
             setSubmitted(true);
             setError(false);
-            navigate('/home');
+            navigate('/lux');
         }
     };
 
@@ -90,14 +105,14 @@ export default function RegForm() {
         <div className="home">
         <div className="form">
 
-                <h1>User Registration</h1>
+        <div className="form-heading">
+    <h1 style={{ color: '#fff', fontSize: '2rem', marginBottom: '1rem' }}>User Registration</h1>
+</div>
 
 
-            {/* Calling to the methods */}
-            <div className="messages">
-                {errorMessage()}
-                {successMessage()}
-            </div>
+
+
+            
 
             <form className='wrapper'>
                 {/* Labels and inputs for form data */}
@@ -119,7 +134,7 @@ export default function RegForm() {
                     value={phone}
                     type="tel"
                     pattern="[0-9]{10}" // Example pattern for a 10-digit phone number
-                />
+                required/>
                 </div>
 
                 <label className="label">Email</label>
@@ -129,7 +144,7 @@ export default function RegForm() {
                     className="input"
                     value={email}
                     type="email"
-                />
+                required/>
                 </div>
 
                 <label className="label">Password</label>
@@ -168,6 +183,11 @@ export default function RegForm() {
                 <button onClick={handleSubmit} className="btn" type="submit">
                     Submit
                 </button>
+
+                <div className="messages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
             </form>
         </div>
         </div>

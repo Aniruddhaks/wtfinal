@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import { FaUser, FaSearch } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
 // Import images directly from the src/assets folder
 import car1 from '/Users/work/Desktop/wtproject/my-app/src/Components/HomePage/car1.png';
@@ -41,6 +42,28 @@ const HomePage = () => {
     setShowCarDropdown(false); // Close car dropdown if open
   };
 
+  const navigate = useNavigate();  // Initialize useNavigate hook
+
+
+  const handleLuxuryClick = () => {
+  navigate('/luxury');  // Navigate to the luxury page
+  };
+
+  const handlesedanClick = () => {
+    navigate('/sedan');  // Navigate to the luxury page
+  };
+
+  const handlesuvClick = () => {
+    navigate('/suv');  // Navigate to the luxury page
+  };
+
+  const handlehatchClick = () => {
+    navigate('/hatchback');  // Navigate to the luxury page
+  };
+
+  
+
+
   
   
 
@@ -67,11 +90,10 @@ const HomePage = () => {
           <button className="car" onClick={handleCarClick}>Cars</button>
           {showCarDropdown && (
             <div className="dropdown-menu">
-              <button onClick={() => alert("Hatchback")}>Hatchback</button>
-              <button onClick={() => alert("Sedan")}>Sedan</button>
-              <button onClick={() => alert("Sports Car")}>Sports Car</button>
-              <button onClick={() => alert("SUV")}>SUV</button>
-              <button onClick={() => alert("Minivan")}>Minivan</button>
+              <button onClick={handlehatchClick}>Hatchback</button>
+              <button onClick={handlesedanClick}>Sedan</button>
+              <button onClick={handleLuxuryClick}>Luxury</button>
+              <button onClick={handlesuvClick}>SUV</button>
             </div>
           )}
         </div>
@@ -83,7 +105,6 @@ const HomePage = () => {
               <button onClick={() => alert("Sports Bike")}>Sports Bike</button>
               <button onClick={() => alert("Commuter Bike")}>Commuter Bike</button>
               <button onClick={() => alert("Adventure Bike")}>Adventure Bike</button>
-              <button onClick={() => alert("Scooter")}>Scooter</button>
             </div>
           )}
         </div>
