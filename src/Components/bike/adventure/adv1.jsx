@@ -1,34 +1,36 @@
-//Mercedes Benz S Class
+//RE Himalayan 450
 import React, { useState } from 'react';
+// import { Card, CardContent } from '@/components/ui/card';
+// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './bike.css';
 
-import './t3.css';
-
-const BENZ = () => {
+const HIMALAYAN= () => {
   const [showEmiCalculator, setShowEmiCalculator] = useState(false);
 
   const specs = [
-    { label: "Acceleration (0-100 km/h)", value: "5 seconds" },
-    { label: "Engine", value: "2999cc turbocharged inline 6" },
-    { label: "Engine Type", value: "3.0L M256 Turbocharged I6 + EQ Boost" },
+    { label: "Acceleration (0-100 km/h)", value: "6.5 seconds" },
+    { label: "Engine", value: "451cc liquid-cooled single cylinder" },
+    { label: "Engine Type", value: "452 Sherpa" },
     { label: "Fuel Type", value: "Petrol" },
-    { label: "Max Power", value: "375bhp @ 6100 rpm" },
-    { label: "Max Torque", value: "500Nm @ 1800-5800 rpm" },
-    { label: "Fuel Economy(kmpl)", value: "11.5 kmpl(combined)" }
+    { label: "Max Power", value: "40.2bhp @ 6750 rpm" },
+    { label: "Max Torque", value: "40.8Nm @ 5000 rpm" },
+    { label: "Fuel Economy", value: "30 kmpl" }
   ];
 
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
-    const price = "16500000"; 
-    navigate('/emi', { state: { price } }); 
+    const price = "285000"
+    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
   };
+
   const handleBuyNowNavigation = () => {
     navigate('/payment', { 
       state: { 
-        carName: "Mercedes Benz S Class",
-        price: "₹1,65,00,000"
+        carName: "Royal Enfield Himalayan 450",
+        price: "₹2,85,000"
       } 
     });
   };
@@ -37,9 +39,9 @@ const BENZ = () => {
     <div className="product-page">
       <div className="container">
         <div className="header">
-          <h1 className="title">Mercedes Benz S Class</h1>
+          <h1 className="title">Royl Enfield Himalayan 450</h1>
           <p className="price">
-            ₹1,65,00,000/- 
+            ₹2,85,000/- 
             <span className="price-disclaimer">(ex-showroom Delhi)</span>
           </p>
         </div>
@@ -47,8 +49,8 @@ const BENZ = () => {
         <div className="content-grid">
           <Card className="image-card">
             <img 
-              src="https://imgs.search.brave.com/pt2GUnU2-LLAIbL1ta0dtCX2AduT6eQV8YC3DmqqEoU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy8yMDI0/LW1lcmNlZGVzLWJl/bnotczM1MGQtMTAy/LTY1ZWYyZDU1ZTU1/ZjguanBnP2Nyb3A9/MC41NDR4dzowLjgx/NnhoOzAuMzU5eHcs/MC4xODR4aCZyZXNp/emU9NjQwOio"
-              alt="Mercedes Benz S Class"
+              src="https://imgs.search.brave.com/5V6TcxU2O3M8Ho4-wAa7Q9DLQo3xiAfgAVmw9iBDTPk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdk/LmFlcGxjZG4uY29t/LzEwNTZ4NTk0L24v/Y3cvZWMvMTEwNDMx/L2hpbWFsYXlhbi00/NTItcmlnaHQtZnJv/bnQtdGhyZWUtcXVh/cnRlci00LmpwZWc_/aXNpZz0wJnE9ODAm/d209Mw"
+              alt="RE Himalayan 450"
               className="product-image"
             />
           </Card>
@@ -72,9 +74,9 @@ const BENZ = () => {
           <CardContent className="card-content">
             <h2 className="section-title">Overview</h2>
             <p className="overview-text">
-            The Mercedes-Benz S-Class has been the quintessential choice for those who want nothing less than from their top-of-the-line luxury sedan. 
-            One that oozes space, comfort and refinement, along with the latest in safety and technology. 
-            Previously introduced as a CBU model, the S-Class is now locally assembled in India.
+            The Royal Enfield Himalayan 450 is a capable and versatile mid-size adventure bike, suitable for a wide range of riders and terrain.
+            Its improved performance, handling, and features make it an attractive option for those seeking a reliable and affordable off-road companion.
+            Royal Enfield truly knocked it out of the park with this one. The Himalayan, yet again representing the beacon of change in the segment. 
             </p>
 
             <div className="button-container">
@@ -115,4 +117,4 @@ const BENZ = () => {
   );
 };
 
-export default BENZ;
+export default HIMALAYAN;

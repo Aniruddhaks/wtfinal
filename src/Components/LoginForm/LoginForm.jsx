@@ -34,6 +34,7 @@ const LoginForm=()=>{
         navigate('/home');
     };
     return(<div className="home">
+        <h1 className="site-heading">IgnitionX</h1>
         <div className="wrapper">
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>

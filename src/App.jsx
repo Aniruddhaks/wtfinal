@@ -2,9 +2,12 @@ import React from 'react';
 import LoginForm from './Components/LoginForm/LoginForm';
 import HomePage from './Components/HomePage/HomePage';
 import EMI from './Components/Emi/Emi'
+import PaymentForm from './Components/payment/payment';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' ;
 import RegForm from './Components/RegistrationForm/RegistrationForm';
+import AboutPage from './Components/about/about';
+import CustomerService from './Components/customer_service/customer';
 
 import LuxuryCars from './Components/display/luxury';
 import BMW from './Components/car/luxury/car1';
@@ -34,6 +37,15 @@ import GLOSTER from './Components/car/suv/car18';
 import SCORPIO from './Components/car/suv/car19';
 import HARRIER from './Components/car/suv/car20';
 
+import SportsBikes from './Components/display/bsports';
+import AdventureBikes from './Components/display/badventure';
+import HIMALAYAN from './Components/bike/adventure/adv1';
+import TRIUMPH from './Components/bike/adventure/adv2';
+import DUCATI from './Components/bike/adventure/adv3';
+import KTM from './Components/bike/adventure/adv4';
+import BBMW from './Components/bike/adventure/adv5';
+import CommuterBikes from './Components/display/bcommuter';
+
 function App() {
   return (
     <Router>
@@ -42,6 +54,13 @@ function App() {
         <Route path="/" element={<LoginForm />} /> 
         <Route path="/reg" element={<RegForm/>}/> 
         <Route path="/emi" element={<EMI/>}/> 
+        <Route path="/payment" element={<PaymentForm/>}/> 
+        <Route path="/about" element={<AboutPage/>}/> 
+        <Route path="/customer" element={<CustomerService/>}/> 
+
+
+
+
 
         <Route path="/luxury" element={<LuxuryCars/>}/>  
         <Route path="/bmw" element={<BMW/>}/>  
@@ -70,6 +89,31 @@ function App() {
         <Route path="/gloster" element={<GLOSTER/>}/>  
         <Route path="/scorpio" element={<SCORPIO/>}/>  
         <Route path="/harrier" element={<HARRIER/>}/> 
+
+        <Route path="/sports" element={<SportsBikes/>}/> 
+        {/*} <Route path="/sbmw" element={<SBMW/>}/> 
+        <Route path="/ninja" element={<NINJA/>}/> 
+        <Route path="/cbr" element={<CBR/>}/> 
+        <Route path="/ducati" element={<DUCATI/>}/> 
+        <Route path="/aprillia" element={<APRILLIA/>}/>  */}
+        
+
+        <Route path="/commuter" element={<CommuterBikes/>}/> 
+       {/*} <Route path="/bhonda" element={<BHONDA/>}/> 
+        <Route path="/ntvs" element={<NTVS/>}/> 
+        <Route path="/ather" element={<ATHER/>}/> 
+        <Route path="/jtvs" element={<JTVS/>}/> 
+        <Route path="/hero" element={<HERO/>}/> */}
+
+        <Route path="/adventure" element={<AdventureBikes/>}/> 
+        <Route path="/himalayan" element={<HIMALAYAN/>}/> 
+        <Route path="/triumph" element={<TRIUMPH/>}/> 
+        <Route path="/bbmw" element={<BBMW/>}/> 
+        <Route path="/ktm" element={<KTM/>}/> 
+        <Route path="/ducati" element={<DUCATI/>}/> 
+       
+
+
 
 
 

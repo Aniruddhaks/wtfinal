@@ -1,34 +1,36 @@
-//Mercedes Benz S Class
+//Ducati Multistrada V4
 import React, { useState } from 'react';
+// import { Card, CardContent } from '@/components/ui/card';
+// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './bike.css';
 
-import './t3.css';
-
-const BENZ = () => {
+const DUCATI= () => {
   const [showEmiCalculator, setShowEmiCalculator] = useState(false);
 
   const specs = [
-    { label: "Acceleration (0-100 km/h)", value: "5 seconds" },
-    { label: "Engine", value: "2999cc turbocharged inline 6" },
-    { label: "Engine Type", value: "3.0L M256 Turbocharged I6 + EQ Boost" },
+    { label: "Acceleration (0-100 km/h)", value: "4.2 seconds" },
+    { label: "Engine", value: "1158cc liquid-cooled V4" },
+    { label: "Engine Type", value: "1200cc 16V" },
     { label: "Fuel Type", value: "Petrol" },
-    { label: "Max Power", value: "375bhp @ 6100 rpm" },
-    { label: "Max Torque", value: "500Nm @ 1800-5800 rpm" },
-    { label: "Fuel Economy(kmpl)", value: "11.5 kmpl(combined)" }
+    { label: "Max Power", value: "167bhp @ 9750 rpm" },
+    { label: "Max Torque", value: "125Nm @ 8850 rpm" },
+    { label: "Fuel Economy", value: "22 kmpl" }
   ];
 
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
-    const price = "16500000"; 
-    navigate('/emi', { state: { price } }); 
+    const price = "2145000"
+    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
   };
+
   const handleBuyNowNavigation = () => {
     navigate('/payment', { 
       state: { 
-        carName: "Mercedes Benz S Class",
-        price: "₹1,65,00,000"
+        carName: "Ducati Multistrada V4 S",
+        price: "₹21,45,000"
       } 
     });
   };
@@ -37,9 +39,9 @@ const BENZ = () => {
     <div className="product-page">
       <div className="container">
         <div className="header">
-          <h1 className="title">Mercedes Benz S Class</h1>
+          <h1 className="title">Ducati Multistrada V4</h1>
           <p className="price">
-            ₹1,65,00,000/- 
+            ₹21,45,000/- 
             <span className="price-disclaimer">(ex-showroom Delhi)</span>
           </p>
         </div>
@@ -47,8 +49,8 @@ const BENZ = () => {
         <div className="content-grid">
           <Card className="image-card">
             <img 
-              src="https://imgs.search.brave.com/pt2GUnU2-LLAIbL1ta0dtCX2AduT6eQV8YC3DmqqEoU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy8yMDI0/LW1lcmNlZGVzLWJl/bnotczM1MGQtMTAy/LTY1ZWYyZDU1ZTU1/ZjguanBnP2Nyb3A9/MC41NDR4dzowLjgx/NnhoOzAuMzU5eHcs/MC4xODR4aCZyZXNp/emU9NjQwOio"
-              alt="Mercedes Benz S Class"
+              src="https://imgs.search.brave.com/OvPafVXw4akR4_uKpeAdRbgEShno_BToIwSlo_F64_c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdk/LmFlcGxjZG4uY29t/LzY2NHgzNzQvbi9j/dy9lYy85ODg5MS9t/dWx0aXN0cmFkYS12/NC1yaWdodC1mcm9u/dC10aHJlZS1xdWFy/dGVyLmpwZWc_aXNp/Zz0wJnE9ODA"
+              alt="Ducati Multistrada V4"
               className="product-image"
             />
           </Card>
@@ -72,9 +74,10 @@ const BENZ = () => {
           <CardContent className="card-content">
             <h2 className="section-title">Overview</h2>
             <p className="overview-text">
-            The Mercedes-Benz S-Class has been the quintessential choice for those who want nothing less than from their top-of-the-line luxury sedan. 
-            One that oozes space, comfort and refinement, along with the latest in safety and technology. 
-            Previously introduced as a CBU model, the S-Class is now locally assembled in India.
+            The Ducati Multistrada V4 S is a highly capable and technologically advanced adventure-tourer, offering a unique blend of performance, comfort and sportiness.
+            Its innovative features and refined design make it an excellent choice for riders seeking a versatile and exciting long-distance companion.
+            The Multistrada V4 is the sportiest bike in the segment, it is the most road-biased of the bunch.
+            The suspension setup is just perfect , the bike is stable and planted at high speeds.
             </p>
 
             <div className="button-container">
@@ -115,4 +118,4 @@ const BENZ = () => {
   );
 };
 
-export default BENZ;
+export default DUCATI;

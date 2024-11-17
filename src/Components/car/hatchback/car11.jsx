@@ -1,10 +1,8 @@
 //Mercedes AMG A45 S
 import React, { useState } from 'react';
-// import { Card, CardContent } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './t3.css';
 
 const AMG= () => {
@@ -23,7 +21,16 @@ const AMG= () => {
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
     const price = "9370000"
-    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
+    navigate('/emi', { state: { price } }); 
+  };
+
+  const handleBuyNowNavigation = () => {
+    navigate('/payment', { 
+      state: { 
+        carName: "Mercedes AMG A45 S",
+        price: "₹93,70,000"
+      } 
+    });
   };
 
   return (
@@ -75,7 +82,7 @@ const AMG= () => {
             <div className="button-container">
               <Button 
                 className="buy-button"
-                onClick={() => window.alert('Proceeding to checkout...')}
+                onClick={handleBuyNowNavigation}
               >
                 <ShoppingCart className="button-icon" />
                 Buy Now

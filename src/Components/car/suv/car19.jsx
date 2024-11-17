@@ -1,10 +1,8 @@
 //Mahindra Scorpio N
 import React, { useState } from 'react';
-// import { Card, CardContent } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './t3.css';
 
 const SCORPIO = () => {
@@ -23,7 +21,15 @@ const SCORPIO = () => {
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
     const price = "2454000"
-    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
+    navigate('/emi', { state: { price } }); 
+  };
+  const handleBuyNowNavigation = () => {
+    navigate('/payment', { 
+      state: { 
+        carName: "Mahindra Scorpio N",
+        price: "₹24,54,000"
+      } 
+    });
   };
 
   return (
@@ -74,7 +80,7 @@ const SCORPIO = () => {
             <div className="button-container">
               <Button 
                 className="buy-button"
-                onClick={() => window.alert('Proceeding to checkout...')}
+                onClick={handleBuyNowNavigation}
               >
                 <ShoppingCart className="button-icon" />
                 Buy Now

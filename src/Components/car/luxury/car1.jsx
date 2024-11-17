@@ -1,9 +1,7 @@
 //BMW X5 30d
 import React, { useState } from 'react';
-//import { Card, CardContent } from '@/components/ui/card';
 import { Card, CardContent, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-//import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom'; 
 import { Calculator, ShoppingCart } from 'lucide-react';
 import './t3.css';
 
@@ -23,7 +21,15 @@ const BMW = () => {
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
     const price = "9800000"
-    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
+    navigate('/emi', { state: { price } }); 
+  };
+  const handleBuyNowNavigation = () => {
+    navigate('/payment', { 
+      state: { 
+        carName: "BMW X5 30d",
+        price: "₹98,00,000"
+      } 
+    });
   };
 
   return (
@@ -74,7 +80,7 @@ const BMW = () => {
             <div className="button-container">
               <Button 
                 className="buy-button"
-                onClick={() => window.alert('Proceeding to checkout...')}
+                onClick={handleBuyNowNavigation}
               >
                 <ShoppingCart className="button-icon" />
                 Buy Now

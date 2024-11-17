@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import meridianImage from './meridian.png'; // Adjust path based on your project structure
+import './display.css'
 
 
 const Suv = () => {

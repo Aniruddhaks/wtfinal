@@ -1,10 +1,8 @@
 //Jeep Meridian
 import React, { useState } from 'react';
-// import { Card, CardContent } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import meridian from './meridian.png'
 import './t3.css';
 
@@ -25,7 +23,15 @@ const MERIDIAN = () => {
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
     const price = "3959000"
-    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
+    navigate('/emi', { state: { price } }); 
+  };
+  const handleBuyNowNavigation = () => {
+    navigate('/payment', { 
+      state: { 
+        carName: "Jeep Meridian",
+        price: "₹39,59,000"
+      } 
+    });
   };
 
   return (
@@ -75,7 +81,7 @@ const MERIDIAN = () => {
             <div className="button-container">
               <Button 
                 className="buy-button"
-                onClick={() => window.alert('Proceeding to checkout...')}
+                onClick={handleBuyNowNavigation}
               >
                 <ShoppingCart className="button-icon" />
                 Buy Now

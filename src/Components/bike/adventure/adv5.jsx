@@ -1,34 +1,34 @@
-//Mercedes Benz S Class
+//BMW R1250 GSA
 import React, { useState } from 'react';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import bmwpic from './bmw.png';
+import './bike.css';
 
-import './t3.css';
-
-const BENZ = () => {
+const BBMW = () => {
   const [showEmiCalculator, setShowEmiCalculator] = useState(false);
 
   const specs = [
     { label: "Acceleration (0-100 km/h)", value: "5 seconds" },
-    { label: "Engine", value: "2999cc turbocharged inline 6" },
-    { label: "Engine Type", value: "3.0L M256 Turbocharged I6 + EQ Boost" },
+    { label: "Engine", value: "1254 cc, Twin Cylinder, 4 Valves/Cylinder, DOHC" },
+    { label: "Engine Type", value: "1250 Boxer" },
     { label: "Fuel Type", value: "Petrol" },
-    { label: "Max Power", value: "375bhp @ 6100 rpm" },
-    { label: "Max Torque", value: "500Nm @ 1800-5800 rpm" },
-    { label: "Fuel Economy(kmpl)", value: "11.5 kmpl(combined)" }
+    { label: "Max Power", value: "136bhp @ 7750 rpm" },
+    { label: "Max Torque", value: "143Nm @ 6250 rpm" }
   ];
 
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
-    const price = "16500000"; 
-    navigate('/emi', { state: { price } }); 
+    const price = "2500000"
+    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
   };
+
   const handleBuyNowNavigation = () => {
     navigate('/payment', { 
       state: { 
-        carName: "Mercedes Benz S Class",
-        price: "₹1,65,00,000"
+        carName: "BMW R1250 GSA",
+        price: "₹25,00,000"
       } 
     });
   };
@@ -37,9 +37,9 @@ const BENZ = () => {
     <div className="product-page">
       <div className="container">
         <div className="header">
-          <h1 className="title">Mercedes Benz S Class</h1>
+          <h1 className="title">BMW R1250 GSA</h1>
           <p className="price">
-            ₹1,65,00,000/- 
+            ₹25,00,000/- 
             <span className="price-disclaimer">(ex-showroom Delhi)</span>
           </p>
         </div>
@@ -47,8 +47,8 @@ const BENZ = () => {
         <div className="content-grid">
           <Card className="image-card">
             <img 
-              src="https://imgs.search.brave.com/pt2GUnU2-LLAIbL1ta0dtCX2AduT6eQV8YC3DmqqEoU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy8yMDI0/LW1lcmNlZGVzLWJl/bnotczM1MGQtMTAy/LTY1ZWYyZDU1ZTU1/ZjguanBnP2Nyb3A9/MC41NDR4dzowLjgx/NnhoOzAuMzU5eHcs/MC4xODR4aCZyZXNp/emU9NjQwOio"
-              alt="Mercedes Benz S Class"
+              src={bmwpic}
+              alt="BMW R1250 GSA"
               className="product-image"
             />
           </Card>
@@ -72,9 +72,9 @@ const BENZ = () => {
           <CardContent className="card-content">
             <h2 className="section-title">Overview</h2>
             <p className="overview-text">
-            The Mercedes-Benz S-Class has been the quintessential choice for those who want nothing less than from their top-of-the-line luxury sedan. 
-            One that oozes space, comfort and refinement, along with the latest in safety and technology. 
-            Previously introduced as a CBU model, the S-Class is now locally assembled in India.
+              The BMW R1250 GSA is a premium Adventure Touring Bike offered by BMW. 
+              Powered by a 1250cc Boxer Twin cylinder, it has brilliant off-roading 
+              capabilities along with amazing ride quality on road.
             </p>
 
             <div className="button-container">
@@ -115,4 +115,4 @@ const BENZ = () => {
   );
 };
 
-export default BENZ;
+export default BBMW;

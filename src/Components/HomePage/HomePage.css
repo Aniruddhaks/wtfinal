@@ -264,7 +264,7 @@
   margin-bottom: 20px;
 }
 
-.company-name {
+/* .company-name {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -273,7 +273,7 @@
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   font-size: 1.8rem;
-}
+} */
 
 .company-name h1 {
   font-size: 2.5rem;
@@ -467,3 +467,46 @@
 .dropdown-menu button:hover {
   background: rgb(25, 118, 210);
 }
+
+/* Add these new styles to your existing CSS file */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+/* Update the existing company-name styles to accommodate the new buttons */
+.company-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1976D2, #D32F2F);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+

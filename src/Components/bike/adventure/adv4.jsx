@@ -1,34 +1,36 @@
-//Mercedes Benz S Class
+//KTM 1290 Super Adventure S
 import React, { useState } from 'react';
+// import { Card, CardContent } from '@/components/ui/card';
+// import { Button } from '@/components/ui/button';
 import { Card, CardContent, Button } from '@mui/material';
 import { Calculator, ShoppingCart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './bike.css';
 
-import './t3.css';
-
-const BENZ = () => {
+const KTM= () => {
   const [showEmiCalculator, setShowEmiCalculator] = useState(false);
 
   const specs = [
-    { label: "Acceleration (0-100 km/h)", value: "5 seconds" },
-    { label: "Engine", value: "2999cc turbocharged inline 6" },
-    { label: "Engine Type", value: "3.0L M256 Turbocharged I6 + EQ Boost" },
+    { label: "Acceleration (0-100 km/h)", value: "3.8 seconds" },
+    { label: "Engine", value: "1301cc twin cylinder" },
+    { label: "Engine Type", value: "1301cc LC8 engine" },
     { label: "Fuel Type", value: "Petrol" },
-    { label: "Max Power", value: "375bhp @ 6100 rpm" },
-    { label: "Max Torque", value: "500Nm @ 1800-5800 rpm" },
-    { label: "Fuel Economy(kmpl)", value: "11.5 kmpl(combined)" }
+    { label: "Max Power", value: "160bhp @ 8750 rpm" },
+    { label: "Max Torque", value: "140Nm @ 6500 rpm" },
+    { label: "Fuel Economy", value: "22 kmpl" }
   ];
 
   const navigate = useNavigate();
   const handleEmiNavigation = () => {
-    const price = "16500000"; 
-    navigate('/emi', { state: { price } }); 
+    const price = "2273900"
+    navigate('/emi', { state: { price } }); // Pass the price to the /emi route
   };
+
   const handleBuyNowNavigation = () => {
     navigate('/payment', { 
       state: { 
-        carName: "Mercedes Benz S Class",
-        price: "₹1,65,00,000"
+        carName: "KTM 1290 Super Adventure S",
+        price: "₹22,73,900"
       } 
     });
   };
@@ -37,9 +39,9 @@ const BENZ = () => {
     <div className="product-page">
       <div className="container">
         <div className="header">
-          <h1 className="title">Mercedes Benz S Class</h1>
+          <h1 className="title">KTM 1290 Super Adventure S</h1>
           <p className="price">
-            ₹1,65,00,000/- 
+            ₹22,73,900/- 
             <span className="price-disclaimer">(ex-showroom Delhi)</span>
           </p>
         </div>
@@ -47,8 +49,8 @@ const BENZ = () => {
         <div className="content-grid">
           <Card className="image-card">
             <img 
-              src="https://imgs.search.brave.com/pt2GUnU2-LLAIbL1ta0dtCX2AduT6eQV8YC3DmqqEoU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy8yMDI0/LW1lcmNlZGVzLWJl/bnotczM1MGQtMTAy/LTY1ZWYyZDU1ZTU1/ZjguanBnP2Nyb3A9/MC41NDR4dzowLjgx/NnhoOzAuMzU5eHcs/MC4xODR4aCZyZXNp/emU9NjQwOio"
-              alt="Mercedes Benz S Class"
+              src="https://imgs.search.brave.com/rxA6QMUGuakWHVddVwU3g29nKiGmtyCZN4qtLPduSs0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pMi53/cC5jb20vcmlkZXJt/YWdhemluZS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MDEvMjAyMy1LVE0t/MTI5MC1TVVBFUi1B/RFZFTlRVUkUtUy0x/NC5qcGc_c3NsPTE"
+              alt="KTM 1290 Super Adventure S"
               className="product-image"
             />
           </Card>
@@ -72,9 +74,9 @@ const BENZ = () => {
           <CardContent className="card-content">
             <h2 className="section-title">Overview</h2>
             <p className="overview-text">
-            The Mercedes-Benz S-Class has been the quintessential choice for those who want nothing less than from their top-of-the-line luxury sedan. 
-            One that oozes space, comfort and refinement, along with the latest in safety and technology. 
-            Previously introduced as a CBU model, the S-Class is now locally assembled in India.
+            Overall, the KTM 1290 Super Adventure S is an exceptional motorcycle that checks all the boxes for adventure touring and off-road enthusiasts.
+            Its impressive performance, comfort, and technology make it a top choice for riders seeking a capable and versatile bike.
+            It is the first of the bike KTMs introduced in India, and there is a lot ofexcitement and anticipation around these bikes.
             </p>
 
             <div className="button-container">
@@ -115,4 +117,4 @@ const BENZ = () => {
   );
 };
 
-export default BENZ;
+export default KTM;

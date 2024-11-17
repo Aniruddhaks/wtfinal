@@ -1,0 +1,221 @@
+.payment-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .plan-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .edit-button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #e41e31;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .total-amount {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .card-option, .netbanking-option {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .card-option.selected {
+    border-color: #4CAF50;
+    background-color: #f8fff8;
+  }
+  
+  .option-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .radio-container {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .radio-selected {
+    width: 12px;
+    height: 12px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+  }
+  
+  .radio-unselected {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+  }
+  
+  .option-title {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .option-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .card-logos {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .card-form {
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .card-number-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-type-logo {
+    position: absolute;
+    right: 0.75rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .date-inputs {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .date-select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    width: 100px;
+  }
+  
+  .cvv-input {
+    position: relative;
+    width: 100px;
+  }
+  
+  .cvv-info {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .terms-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .terms-checkbox label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .pay-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e41e31;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pay-button:hover {
+    background-color: #d41b2d;
+  }
+  
+  .netbanking-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .payment-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .form-row {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .card-logos {
+      display: none;
+    }
+  }

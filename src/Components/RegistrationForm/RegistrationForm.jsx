@@ -67,7 +67,7 @@ export default function RegForm() {
         else {
             setSubmitted(true);
             setError(false);
-            navigate('/lux');
+            navigate('/home');
         }
     };
 
