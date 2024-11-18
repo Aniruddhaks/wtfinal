@@ -6,16 +6,17 @@ import { FaInfoCircle } from 'react-icons/fa';
 import { FaHeadset } from 'react-icons/fa';
 import './new.css'
 
+import mer from './meridian.png'
+import sp from './sp.png'
+import ap from './ap.png'
+import q from './q7.png'
 
 
-// Import images directly from the src/assets folder
-import car1 from '/Users/work/Desktop/wtproject/my-app/src/Components/HomePage/car1.png';
-import car2 from '/Users/work/Desktop/wtproject/my-app/src/Components/HomePage/car2.png';
-// import bike1 from '../assets/bike1.jpg';
-// import bike2 from '../assets/bike2.jpg';
+
+
 
 // Array of imported images
-const images = [car1, car2];
+const images = [mer,sp,ap,q ];
 
 const vehicleData = {
   cars: {

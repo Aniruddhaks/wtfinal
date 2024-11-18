@@ -38,13 +38,27 @@ import SCORPIO from './Components/car/suv/car19';
 import HARRIER from './Components/car/suv/car20';
 
 import SportsBikes from './Components/display/bsports';
+import APRILLIA from './Components/bike/sportsbikes/s5';
+import SBMW from './Components/bike/sportsbikes/s1';
+import NINJA from './Components/bike/sportsbikes/s2';
+import CHONDA from './Components/bike/sportsbikes/s3';
+import PDUCATI from './Components/bike/sportsbikes/s4';
+
 import AdventureBikes from './Components/display/badventure';
 import HIMALAYAN from './Components/bike/adventure/adv1';
 import TRIUMPH from './Components/bike/adventure/adv2';
 import DUCATI from './Components/bike/adventure/adv3';
 import KTM from './Components/bike/adventure/adv4';
 import BBMW from './Components/bike/adventure/adv5';
+
 import CommuterBikes from './Components/display/bcommuter';
+import BHONDA from './Components/bike/Commuters/com_1';
+import NTVS from './Components/bike/Commuters/com_2';
+import ATHER from './Components/bike/Commuters/com_3';
+import HERO from './Components/bike/Commuters/com_4';
+import JTVS from './Components/bike/Commuters/com_5';
+
+
 
 function App() {
   return (
@@ -91,19 +105,19 @@ function App() {
         <Route path="/harrier" element={<HARRIER/>}/> 
 
         <Route path="/sports" element={<SportsBikes/>}/> 
-        {/*} <Route path="/sbmw" element={<SBMW/>}/> 
+         <Route path="/sbmw" element={<SBMW/>}/> 
         <Route path="/ninja" element={<NINJA/>}/> 
-        <Route path="/cbr" element={<CBR/>}/> 
-        <Route path="/ducati" element={<DUCATI/>}/> 
-        <Route path="/aprillia" element={<APRILLIA/>}/>  */}
+        <Route path="/chonda" element={<CHONDA/>}/> 
+        <Route path="/pducati" element={<PDUCATI/>}/> 
+        <Route path="/aprillia" element={<APRILLIA/>}/>  
         
 
         <Route path="/commuter" element={<CommuterBikes/>}/> 
-       {/*} <Route path="/bhonda" element={<BHONDA/>}/> 
+        <Route path="/bhonda" element={<BHONDA/>}/> 
         <Route path="/ntvs" element={<NTVS/>}/> 
         <Route path="/ather" element={<ATHER/>}/> 
         <Route path="/jtvs" element={<JTVS/>}/> 
-        <Route path="/hero" element={<HERO/>}/> */}
+        <Route path="/hero" element={<HERO/>}/> 
 
         <Route path="/adventure" element={<AdventureBikes/>}/> 
         <Route path="/himalayan" element={<HIMALAYAN/>}/> 

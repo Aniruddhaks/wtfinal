@@ -2,57 +2,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './bdisplay.css'
+import ac from './ac.png';
+import at from './at.png';
+import sp from './sp.png';
+import nt from './nt.png';
+import jp from './jp.png';
+
 
 const CommuterBikes = () => {
   const navigate = useNavigate();
   
   const bikes = [
-    {
-      id: 1,
-      name: 'Honda CB300R',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 2,
-      name: 'Yamaha MT-03',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 3,
-      name: 'KTM Duke 390',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 4,
-      name: 'Kawasaki Z400',
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 5,
-      name: 'Suzuki SV650',
-      image: '/api/placeholder/400/300'
-    }
+    { id: 1, name: 'Honda Activa', image: ac },
+    { id: 2, name: 'TVS Ntorq', image: nt },
+    { id: 3, name: 'Ather 450X', image: at },
+    { id: 4, name: 'TVS Jupiter', image:jp  },
+    { id: 5, name: 'Hero Splendor', image: sp }
   ];
 
   const handleBikeClick = (bikeId) => {
     switch(bikeId) {
-      case 1:
-        navigate('/honda-cb');
-        break;
-      case 2:
-        navigate('/yamaha-mt');
-        break;
-      case 3:
-        navigate('/ktm');
-        break;
-      case 4:
-        navigate('/kawasaki-z');
-        break;
-      case 5:
-        navigate('/suzuki');
-        break;
-      default:
-        break;
+      case 1: navigate('/bhonda'); break;
+      case 2: navigate('/ntvs'); break;
+      case 3: navigate('/ather'); break;
+      case 4: navigate('/jtvs'); break;
+      case 5: navigate('/hero'); break;
+      default: break;
     }
   };
 
